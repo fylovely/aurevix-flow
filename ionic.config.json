@@ -1,0 +1,7 @@
+{
+  "name": "AurevixFlow",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
