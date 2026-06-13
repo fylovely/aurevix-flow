@@ -1,2 +1,52 @@
 /* For information on how to create your own theme, please refer to:
 http://ionicframework.com/docs/theming/ */
+:root {
+    /* Background */
+    --ion-background-color: #0b1410;
+
+    /* Card */
+    --ion-card-background: #10251a;
+
+    /* Text */
+    --ion-text-color: #eafff3;
+
+    /* Primary Green */
+    --ion-color-primary: #00ff9d;
+
+    /* Accent Green */
+    --green-primary: #00ff9d;
+    --green-soft: #1affb3;
+
+    /* Danger */
+    --red: #ff4d4d;
+}
+
+body {
+    background: #0b1410;
+    color: #eafff3;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Card style */
+ion-card {
+    background: linear-gradient(145deg, #10251a, #0e1f16);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 255, 157, 0.08);
+    border: 1px solid rgba(0, 255, 157, 0.08);
+}
+
+/* Button */
+ion-button {
+    --background: #00ff9d;
+    --color: #0b1410;
+    font-weight: bold;
+    border-radius: 12px;
+}
+
+/* Input */
+ion-input, ion-searchbar {
+    --background: #10251a;
+    --color: #eafff3;
+}
+
+

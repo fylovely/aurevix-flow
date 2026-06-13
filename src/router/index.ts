@@ -1,39 +1,53 @@
-import { createRouter, createWebHistory } from '@ionic/vue-router';
-import { RouteRecordRaw } from 'vue-router';
-import TabsPage from '../views/TabsPage.vue'
+import { createRouter, createWebHistory } from "@ionic/vue-router";
+ const routes = [
+     {
+        path: "/",
+        redirect: "/tabs/home"
+    },
+    {
+        path: "/tabs/",
+        component: () => import("@/pages/TabsPage.vue"),
+        children: [
+             {
+                path: "home",
+                component: () => import("@/pages/HomePage.vue")
+            },
+                {  
+                    path: "market",
+                    component: () => import("@/pages/MarketPage.vue")
+                },
+                { 
+                    path: "portfolio",
+                    component: () => import("@/pages/PortfolioPage.vue")
+                },
+                {
+                    path: "profile",
+                    component: () => import("@/pages/ProfilePage.vue")
+                },
+                {
+                    path: "goals",
+                    component: () => import("@/pages/GoalsPage.vue")
+                },
+                {
+                    path: "report",
+                    component: () => import("@/pages/ReportPage.vue")
+                },
+                {
+                    path: "journal",
+                    component: () => import("@/pages/JournalPage.vue")
+                }     
+        ] 
+                              
+    },
 
-const routes: Array<RouteRecordRaw> = [
-  {
-    path: '/',
-    redirect: '/tabs/tab1'
-  },
-  {
-    path: '/tabs/',
-    component: TabsPage,
-    children: [
-      {
-        path: '',
-        redirect: '/tabs/tab1'
-      },
-      {
-        path: 'tab1',
-        component: () => import('@/views/Tab1Page.vue')
-      },
-      {
-        path: 'tab2',
-        component: () => import('@/views/Tab2Page.vue')
-      },
-      {
-        path: 'tab3',
-        component: () => import('@/views/Tab3Page.vue')
-      }
-    ]
-  }
-]
+    {
+        path: "/coin/:id",
+        component: () => import("@/pages/CoinDetailPage.vue")
+    }
 
+];
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes
-})
-
-export default router
+    history: createWebHistory(import.meta.env.BASE_URL),
+    routes
+});
+export default router;
