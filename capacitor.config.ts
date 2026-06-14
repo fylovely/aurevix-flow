@@ -3,12 +3,8 @@ import type { CapacitorConfig } from '@capacitor/cli';
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
   appName: 'AurevixFlow',
-  webDir: 'dist'
-};
-
-export default config;
-
-plugins: {
+  webDir: 'dist',
+  plugins: {
   SplashScreen: {
     launchShowDuration: 2500,
     backgroundColor: "#0b1410",
@@ -19,3 +15,6 @@ plugins: {
     style: "DARK"
   }
 }
+};
+
+export default config;
